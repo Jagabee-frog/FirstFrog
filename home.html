@@ -1,0 +1,29 @@
+{% extends 'froghome/base.html' %}
+
+{% block head %}
+  <link rel="stylesheet" href="/static/css/home.css?{% now "U" %}">
+{% endblock %}
+
+{% block content %}
+    <div id="parent">
+      <img id="backing" src="https://cdn.mos.cms.futurecdn.net/39CUYMP8vJqHAYGVzUghBX-1200-80.jpg"/>
+      <img id="shadow" src="https://garden.spoonflower.com/c/14796998/p/f/m/pnS9hoiUzdEyXokx18_Dw26_MHuRTHQ9um5qK0tYi3FU2qj25nIT2_cKug/Blackest%20Black%20Solid%20Plain%20Color%20Spoonflower%20(rich%20blue%20based%20black).jpg"/>
+      <h1 id="title-text">
+          Welcome To Frogs
+      </h1>
+      <p id="descrip">
+          I created this site to show frogs, here is one below:
+      </p>
+      <img id="dance" src="https://i.pinimg.com/originals/da/4d/6e/da4d6ea38c476ba6aa34d2ef39f1d8b0.gif">
+
+      <a id = "button" href="{% url 'database' %}">Check out the Frog database!</a>
+
+
+      <!--<p id="passive">Welcome, {{ name }}</p>
+      <p id="passive2">Here is a list of the current frogs we have:</p>
+        {% for frog in frogs %}
+            <p id="passive2">{{frog.frogname}}: {{frog.species}}</p>
+        {% endfor %}-->
+    </div>
+    
+{% endblock%}
